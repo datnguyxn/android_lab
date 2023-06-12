@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_lock"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_lock_reset_24" />
+
+    <TextView
+        android:id="@+id/sign_in_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_lock"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="-169dp"
+        android:gravity="center"
+        android:text="Sign in to continue"
+        android:textColor="#FF0000"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sign_in_title"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="15dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Username" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="15dp"
+            android:hint="Password" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/cb_keep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/cb_keep"
+                android:text="Keep me Sign in"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_reset_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESET PASSWORD"
+            android:gravity="end"
+            android:textSize="20sp"
+            android:minHeight="48dp"
+            android:textColor="@android:color/holo_red_dark"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_sign_in"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="sign in"
+        app:icon="@drawable/ic_baseline_assignment_ind_24"
+        app:iconGravity="textStart"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
